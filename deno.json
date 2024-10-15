@@ -1,0 +1,28 @@
+{
+  "tasks": {
+    "dev:be": "cd ./backend && deno task dev",
+    "dev:fe": "cd ./frontend && deno task dev",
+    "test:be": "cd ./backend && deno task test"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1"
+  },
+  "fmt": {
+    "semiColons": false,
+    "singleQuote": true
+  },
+  "workspace": [
+    "./backend",
+    "./frontend"
+  ],
+  "compilerOptions": {
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable",
+      "deno.ns"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "solid-js"
+  }
+}
